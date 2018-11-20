@@ -85,12 +85,22 @@ export default (ins: Feed) => {
     // entry: required elements
     //
 
-    let entry: any = [
-      { title: { _attr: { type: "html" }, _cdata: item.title } },
-      { id: item.id || item.link },
-      { link: [{ _attr: { href: item.link } }] },
-      { updated: item.date.toISOString() }
-    ];
+    let entry: any = [];
+    if (item.title) {
+      entry.push({ title: { _attr: { type: "html" }, _cdata: item.title } });
+    }
+
+    if (item.id || item.link) {
+      entry.push({ id: item.id || item.link });
+    }
+
+    if (item.link) {
+      entry.push({ link: [{ _attr: { href: item.link } }] });
+    }
+
+    if (item.date) {
+      entry.push({ updated: item.date.toISOString() });
+    }
 
     //
     // entry: recommended elements
