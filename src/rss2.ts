@@ -19,7 +19,6 @@ export default (ins: Feed) => {
     {
       lastBuildDate: options.updated ? options.updated.toUTCString() : new Date().toUTCString()
     },
-    { docs: "http://blogs.law.harvard.edu/tech/rss" },
     { generator: options.generator || generator }
   ];
 
