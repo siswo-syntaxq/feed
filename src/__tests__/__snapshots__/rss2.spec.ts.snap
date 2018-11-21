@@ -8,7 +8,6 @@ exports[`rss 2.0 should generate a valid feed 1`] = `
         <link>http://example.com/</link>
         <description>This is my personnal feed!</description>
         <lastBuildDate>Sat, 13 Jul 2013 23:00:00 GMT</lastBuildDate>
-        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Feed Title</title>
